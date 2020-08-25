@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Avalonia.Data;
 using AvaloniaDemo.Models.Documents;
 using AvaloniaDemo.Models.Tools;
 using AvaloniaDemo.ViewModels.Documents;
@@ -155,6 +154,10 @@ namespace AvaloniaDemo
                         Id = "RightSplitter",
                         Title = "RightSplitter"
                     },
+                    new RootDock
+                    {
+                        Id = "Second root",
+                        VisibleDockables = CreateList<IDockable>(
                     new ProportionalDock
                     {
                         Id = "RightPane",
@@ -194,6 +197,8 @@ namespace AvaloniaDemo
                                 )
                             }
                         )
+                    }
+                    )
                     }
                 )
             };
